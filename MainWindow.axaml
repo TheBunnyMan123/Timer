@@ -1,0 +1,30 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Timer.MainWindow"
+        Title="Timer"
+        Width="200"
+        Height="100"
+        MinWidth="200"
+        MinHeight="100"
+        MaxWidth="200"
+        MaxHeight="100"
+        CanResize="false">
+        <Window.Styles>
+            <Style Selector="TextBox">
+                <Setter Property="FontFamily" Value="Noto Sans"/>
+                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="FontWeight" Value="300"/>
+            </Style>
+        </Window.Styles>
+        
+    <StackPanel HorizontalAlignment="Center" Margin="0">
+        <TextBox Name="MainTextBox" Width="162.5" Margin="7.5" Watermark="Timer (H:M:S)"></TextBox>
+        <Grid HorizontalAlignment="Center" Margin="7.5" ColumnDefinitions="Auto,Auto" RowDefinitions="Auto">
+            <Button Click="OnButtonClick" Name="StartStop" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="2.5" Width="100" Height="30"  Grid.Row="0" Grid.Column="0">Start / Stop</Button>
+            <Button Click="OnButtonClick" Name="Reset" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="2.5" Width="70" Height="30"  Grid.Row="0" Grid.Column="1">Reset</Button>
+        </Grid>
+    </StackPanel>
+</Window>
